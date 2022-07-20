@@ -27,7 +27,7 @@ fs.writeFileSync('./session.json', JSON.stringify(Lexxy.base64EncodedAuthInfo(),
 Lexxy.on('chat-update', async (message) => {
 require('./index.js')(Lexxy, message)})}
 function nocache(module, cb = () => { }) {
-console.log('[ ! ]', `'${module}'`, 'DI Pantau Oleh Lexxy Official')
+console.log('[ ! ]', `${module}`, 'DI Pantau Oleh Lexxy Official')
 fs.watchFile(require.resolve(module), async () => {
 await uncache(require.resolve(module))
 cb(module)})}
